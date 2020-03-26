@@ -2,3 +2,5 @@ github.com/hth0919/tsdbparser v0.0.0-20200326045155-5e8c75306751 h1:q5VpsoOJcuau
 github.com/hth0919/tsdbparser v0.0.0-20200326045155-5e8c75306751/go.mod h1:959HRXay9nUQnuWPp4MFvdbVnes/+/LyLBRFwFPVvOg=
 github.com/hth0919/tsdbparser v0.0.0-20200326062616-8cac910b92ec h1:GY/KW6E2deQ2ESn8Gu8GfMGuC4Ao3u2QZ3KkIH2QRbA=
 github.com/hth0919/tsdbparser v0.0.0-20200326062616-8cac910b92ec/go.mod h1:959HRXay9nUQnuWPp4MFvdbVnes/+/LyLBRFwFPVvOg=
+github.com/hth0919/tsdbparser v0.0.0-20200326072536-ea5bdf0dc450 h1:WNW0q3izChSQr5ZtcZkKDZ/nlwCNLo8pbI2G1AsRJZY=
+github.com/hth0919/tsdbparser v0.0.0-20200326072536-ea5bdf0dc450/go.mod h1:959HRXay9nUQnuWPp4MFvdbVnes/+/LyLBRFwFPVvOg=
