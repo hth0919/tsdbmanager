@@ -21,7 +21,7 @@ func(m *TSManager) NewTSManager(host string) *TSManager{
 	m.OMetric = parser.Metric{
 		MetricName: "",
 		Tags: map[string]string{},
-		Dps: map[int64]int{},
+		Dps: map[int64]float64{},
 	}
 	return m
 }
