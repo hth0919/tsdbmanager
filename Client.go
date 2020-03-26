@@ -41,10 +41,12 @@ func(m *TSManager)SetCNPName(Cluster string, Node string, Pod string, Mode IOTyp
 }
 
 func(c *TSClient) NewTSClient(host string) *TSClient{
-	c.Host = host
-	c.Cluster = ""
-	c.Node = ""
-	c.Pod = ""
+	client := &TSClient{
+		Host:    host,
+		Cluster: "",
+		Node:    "",
+		Pod:     "",
+	}
 
-	return c
+	return client
 }
