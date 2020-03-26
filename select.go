@@ -2,7 +2,6 @@ package tsdbmanager
 
 import (
 	parser "github.com/hth0919/tsdbparser"
-	"io/ioutil"
 	"net/http"
 
 )
@@ -20,12 +19,7 @@ func(m *TSManager)SelectMetric(MetricName string) float64{
 	if err != nil {
 		panic(err)
 	}
-	respBody, err := ioutil.ReadAll(resp.Body)
-	if err != nil {
-		str := string(respBody)
-		println(str)
-	}
-	m.OMetric = *parser.JsonUnmarshaller(respBody)
+	m.OMetric = *parser.JsonUnmarshaller(resp.Body)
 	defer resp.Body.Close()
 
 	return parser.GetLast(&m.OMetric)
