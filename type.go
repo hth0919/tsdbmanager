@@ -21,9 +21,9 @@ type TSClient struct {
 	Node string
 	Pod string
 }
-
+type IOType int
 const (
-	input = 0
-	output = 1
+	input  IOType = 0
+	output IOType = 1
 )
 

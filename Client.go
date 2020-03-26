@@ -26,7 +26,7 @@ func(m *TSManager) NewTSManager(host string) *TSManager{
 	return m
 }
 
-func(m *TSManager)SetCNPName(Cluster string, Node string, Pod string, Mode int) {
+func(m *TSManager)SetCNPName(Cluster string, Node string, Pod string, Mode IOType) {
 	if Mode == input {
 		m.IMetric.Tags["Cluster"] = Cluster
 		m.IMetric.Tags["Node"] = Node
