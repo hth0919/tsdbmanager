@@ -9,7 +9,7 @@ import (
 
 func(m *TSManager)SelectMetric(MetricName string) float64{
 	query :="/api/query?"
-	start := "1h-ago"
+	start := "start=1h-ago"
 	metric := "m=sum:"+MetricName
 	cluster := "Cluster="+m.Client.Cluster
 	node := "Node="+m.Client.Node
