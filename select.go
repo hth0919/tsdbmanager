@@ -31,7 +31,7 @@ func(m *TSManager)SelectMetric(MetricName string) float64{
 	return parser.GetLast(&m.OMetric)
 }
 
-func(m *TSManager)SelectMetricWithCNPName(Cluster string, Node string, Pod string,MetricName string) {
+func(m *TSManager)SelectMetricWithCNPName(Cluster string, Node string, Pod string,MetricName string) float64{
 	m.SetCNPName(Cluster,Node,Pod,output)
-	m.SelectMetric(MetricName)
+	return m.SelectMetric(MetricName)
 }
