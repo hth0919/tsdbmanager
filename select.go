@@ -7,7 +7,7 @@ import (
 
 )
 
-func(m *TSManager)SelectMetric(MetricName string) float64{
+func(m *TSManager)SelectMetric(MetricName string) interface{}{
 	query :="/api/query?"
 	start := "start=1h-ago"
 	metric := "m=sum:"+MetricName
@@ -31,7 +31,7 @@ func(m *TSManager)SelectMetric(MetricName string) float64{
 	return parser.GetLast(&m.OMetric)
 }
 
-func(m *TSManager)SelectMetricWithCNPName(Cluster string, Node string, Pod string,MetricName string) float64{
+func(m *TSManager)SelectMetricWithCNPName(Cluster string, Node string, Pod string,MetricName string) interface{}{
 	m.SetCNPName(Cluster,Node,Pod,output)
 	return m.SelectMetric(MetricName)
 }

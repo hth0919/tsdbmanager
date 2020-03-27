@@ -2,6 +2,11 @@ package tsdbmanager
 
 import parser "github.com/hth0919/tsdbparser"
 
+const (
+	input  IOType = 0
+	output IOType = 1
+)
+
 type TSManager struct {
 	Client *TSClient
 	OMetric parser.Metric
@@ -11,7 +16,7 @@ type TSManager struct {
 type IMetric struct {
 	Metric string `json:"metric"`
 	Timestamp int64 `json:"timestamp"`
-	Value float64 `json:"value"`
+	Value interface{} `json:"value"`
 	Tags map[string]string `json:"tags"`
 }
 
@@ -22,8 +27,10 @@ type TSClient struct {
 	Pod string
 }
 type IOType int
-const (
-	input  IOType = 0
-	output IOType = 1
-)
 
+var iotype = [...]int{
+	0,1,
+}
+func (m IOType) String() int {
+	return iotype[m%2]
+}

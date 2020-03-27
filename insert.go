@@ -8,7 +8,7 @@ import (
 	"time"
 )
 
-func(m *TSManager)InsertMetric(MetricName string, Value float64) {
+func(m *TSManager)InsertMetric(MetricName string, Value interface{}) {
 	query := "/api/put?details"
 	rest := m.Client.Host + query
 	m.IMetric.Metric = MetricName
@@ -33,7 +33,7 @@ func(m *TSManager)InsertMetric(MetricName string, Value float64) {
 	}
 }
 
-func(m *TSManager)InsertMetricWithCNPName(Cluster string, Node string, Pod string, MetricName string, Value float64) {
+func(m *TSManager)InsertMetricWithCNPName(Cluster string, Node string, Pod string, MetricName string, Value interface{}) {
 	m.SetCNPName(Cluster,Node,Pod, input)
 	m.InsertMetric(MetricName,Value)
 }

@@ -16,7 +16,7 @@ func JsonUnmarshaller (jsonfile []byte) *Metric {
 	return &c[0]
 }
 
-func GetLast(input *Metric) float64 {
+func GetLast(input *Metric) interface{}  {
 	var last int
 	last = 0
 	for k := range input.Dps {
