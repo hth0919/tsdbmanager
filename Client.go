@@ -40,6 +40,10 @@ func(m *TSManager)SetCNPName(Cluster string, Node string, Pod string, Mode IOTyp
 	}
 }
 
+func(m *TSManager)SetInputTag(Tag map[string]string) {
+	m.IMetric.Tags = Tag
+}
+
 func(c *TSClient) NewTSClient(host string) *TSClient{
 	client := &TSClient{
 		Host:    host,
